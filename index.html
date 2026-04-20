@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+
+    <!-- Dark Mode Button -->
+   <label class="switch">
+  <input type="checkbox" id="darkModeToggle">
+  <span class="slider">
+    <span class="icon sun">☀️</span>
+    <span class="icon moon">🌙</span>
+  </span>
+</label>
+  </nav>
+
+  <!-- ================= HOME ================= -->
+  <section class="hidden" id="home">
+
+    <div class="home-container">
+
+      <!-- LEFT TEXT -->
+      <div class="home-text">
+        <h1>Hello, I'm Navneeta 👋</h1>
+        <h2>I am a <span id="typing"></span></h2>
+        <p>Aspiring Software Developer</p>
+
+        <!-- Buttons -->
+        <div class="home-buttons">
+          <a href="#projects">View Projects</a>
+          <a href="#contact">Contact Me</a>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="home-image">
+        <img src="profile.jpg" alt="My Photo">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="hidden" id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a B.Tech student passionate about coding, problem solving,
+      and building real-world projects. I enjoy learning new technologies
+      and improving my development skills.
+    </p>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="hidden" id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>C++</li>
+      <li>Java</li>
+      <li>HTML & CSS</li>
+    </ul>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="hidden" id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="card">
+        <h3>Maze Solver</h3>
+        <p>Finds path using recursion and backtracking.</p>
+      </div>
+
+      <div class="card">
+        <h3>AI Insurance</h3>
+        <p>Smart insurance pricing using AI.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="hidden" id="contact">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <a href="https://github.com/yourusername" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= JS ================= -->
+  <script src="script.js"></script>
+
+</body>
+</html>
