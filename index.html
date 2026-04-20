@@ -1,122 +1,400 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Portfolio</title>
+  <title>Navneeta | Portfolio</title>
 
-  <!-- CSS -->
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+    <rect width='100' height='100' rx='18' fill='%230099cc'/>
+    <text y='.9em' font-size='72' font-family='serif' font-weight='bold' fill='white' x='12'>
+      N
+    </text>
+  </svg>">
+ 
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
 
-  <!-- ================= NAVBAR ================= -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-
-    <!-- Dark Mode Button -->
-   <label class="switch">
-  <input type="checkbox" id="darkModeToggle">
-  <span class="slider">
-    <span class="icon sun">☀️</span>
-    <span class="icon moon">🌙</span>
-  </span>
-</label>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">N.</span>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#hackathons">Hackathons</a>
+        <a href="#hackathons">Events</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider">
+          <span class="icon sun">☀️</span>
+          <span class="icon moon">🌙</span>
+        </span>
+      </label>
+    </div>
   </nav>
 
-  <!-- ================= HOME ================= -->
-  <section class="hidden" id="home">
-
+  <!-- HOME -->
+  <section id="home" class="hidden">
     <div class="home-container">
-
-      <!-- LEFT TEXT -->
       <div class="home-text">
-        <h1>Hello, I'm Navneeta 👋</h1>
-        <h2>I am a <span id="typing"></span></h2>
-        <p>Aspiring Software Developer</p>
-
-        <!-- Buttons -->
+        <p class="home-greeting">Hello there 👋</p>
+        <h1>I'm <span class="accent">Navneeta</span></h1>
+        <h2 class="typing-line">I am a <span id="typing"></span><span class="cursor">|</span></h2>
+        <p class="home-sub">Aspiring Software Developer · B.Tech Student</p>
         <div class="home-buttons">
-          <a href="#projects">View Projects</a>
-          <a href="#contact">Contact Me</a>
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#contact" class="btn-outline">Contact Me</a>
+
         </div>
       </div>
-
-      <!-- RIGHT IMAGE -->
       <div class="home-image">
-        <img src="profile.jpg" alt="My Photo">
+        <div class="image-wrapper">
+          <img src="navneeta.jpg" alt="Navneeta">
+        </div>
       </div>
-
     </div>
-
+    <div class="scroll-hint"><span></span></div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
-  <section class="hidden" id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a B.Tech student passionate about coding, problem solving,
-      and building real-world projects. I enjoy learning new technologies
-      and improving my development skills.
-    </p>
-  </section>
-
-  <!-- ================= SKILLS ================= -->
-  <section class="hidden" id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>C++</li>
-      <li>Java</li>
-      <li>HTML & CSS</li>
-    </ul>
-  </section>
-
-  <!-- ================= PROJECTS ================= -->
-  <section class="hidden" id="projects">
-    <h2>Projects</h2>
-
-    <div class="projects-container">
-
-      <div class="card">
-        <h3>Maze Solver</h3>
-        <p>Finds path using recursion and backtracking.</p>
-      </div>
-
-      <div class="card">
-        <h3>AI Insurance</h3>
-        <p>Smart insurance pricing using AI.</p>
-      </div>
-
+  <!-- ABOUT -->
+  <section id="about" class="hidden">
+    <div class="section-inner">
+      <p class="section-label">Get to know me</p>
+      <h2 class="section-title">About Me</h2>
+      <p class="about-text">
+        I’m a Computer Science student who enjoys building
+        real-world applications and learning through hands-on 
+        projects. I focus on developing strong problem-solving
+        skills while exploring web development, backend systems
+        , and emerging technologies like AI.
+      </p>
     </div>
   </section>
 
-  <!-- ================= CONTACT ================= -->
-  <section class="hidden" id="contact">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-
-    <!-- Social Icons -->
-    <div class="social-icons">
-      <a href="https://github.com/yourusername" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">
-        <i class="fab fa-linkedin"></i>
-      </a>
+    <!-- STATS -->
+  <section id="stats" class="hidden stats-section">
+    <div class="section-inner">
+      <div class="stats-grid stats-grid-3">
+        <div class="stat-card">
+          <span class="stat-number" data-target="3">0</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-label">Skills Learned</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="100">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Problems Solved</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ================= JS ================= -->
+  <!-- SKILLS -->
+  <section id="skills" class="hidden">
+    <div class="section-inner">
+      <p class="section-label">What I work with</p>
+      <h2 class="section-title">Skills</h2>
+      <div class="skill-categories">
+
+        <div class="skill-cat-card">
+          <div class="skill-cat-header">
+            <i class="fas fa-code"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="devicon cpp"></i> C++</span>
+            <span><i class="devicon java"></i> Java</span>
+            <span><i class="devicon python"></i> Python</span>
+          </div>
+        </div>
+
+        <div class="skill-cat-card">
+          <div class="skill-cat-header">
+            <i class="fas fa-globe"></i>
+            <h3>Web</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="fab fa-html5"></i> HTML</span>
+            <span><i class="fab fa-css3-alt"></i> CSS</span>
+            <span><i class="fab fa-js"></i> JavaScript</span>
+            <span><i class="fab fa-node-js"></i> Node.js</span>
+            <span><i class="fab fa-react"></i> React</span>
+          </div>
+        </div>
+
+        <div class="skill-cat-card">
+          <div class="skill-cat-header">
+            <i class="fas fa-brain"></i>
+            <h3>CS Fundamentals</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="fas fa-sitemap"></i> Data Structures</span>
+            <span><i class="fas fa-bolt"></i> Algorithms</span>
+            <span><i class="fas fa-redo"></i> Recursion</span>
+          </div>
+        </div>
+
+        <div class="skill-cat-card">
+          <div class="skill-cat-header">
+            <i class="fas fa-tools"></i>
+            <h3>Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="fab fa-git-alt"></i> Git</span>
+            <span><i class="fab fa-github"></i> GitHub</span>
+            <span><i class="fas fa-terminal"></i> VS Code</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE / EDUCATION -->
+  <section id="experience" class="hidden">
+    <div class="section-inner">
+      <p class="section-label">My journey</p>
+      <h2 class="section-title">Experience & Education</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024 – Present</span>
+            <h3>B.Tech in Computer Science (AI-ML)</h3>
+            <p>G.L. Bajaj Institute Of Technology And Management · Pursuing a bachelor's degree with focus on algorithms, data structures, and software development.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023-2024</span>
+            <h3>Class XII (Senior Secondary)</h3>
+            <p>Ascent International School · (CBSE) · Completed </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2021-2022</span>
+            <h3>Class X (Secondary)</h3>
+            <p>Ascent International School · (CBSE) · Completed</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="hidden">
+    <div class="section-inner">
+      <p class="section-label">What I've built</p>
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <div class="card">
+          <div class="card-top">
+            <i class="fas fa-maze card-icon"></i>
+            <div class="card-links">
+              <a href="https://github.com/navneeta88/RiderSaathi" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://rider-saathi-beta.vercel.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3>Rider Saathi - Smart Assistance System</h3>
+          <p>Designed and built a smart assistance system for riders, providing real-time support.</p>
+          <div class="card-tags">
+            <span>HTML CSS JavaScript</span><span>Node.js</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <i class="fas fa-brain card-icon"></i>
+            <div class="card-links">
+              <a href="https://github.com/navneeta88/-hackathon2026-Navneeta_Mohapatra" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://myovzdy2qenmhwvsnpeomt.streamlit.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3>ShopWave Autonomous Support Agent</h3>
+          <p>An autonomous customer support agent that resolves ShopWave support tickets using Claude's native tool use, concurrent processing, and full audit logging.</p>
+          <div class="card-tags">
+            <span>Python</span><span>LLM-Llama-3.3-70B via Groq
+</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <i class="fas fa-brain card-icon"></i>
+            <div class="card-links">
+              <a href="https://github.com/navneeta88/-hackathon2026-Navneeta_Mohapatra" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3>AI Healthcare Web Application</h3>
+          <p>Built a Flask based web application with integrated machine learning capabilities.</p>
+          <div class="card-tags">
+            <span>Python</span><span>AI/ML</span><span>Data</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Certification -->
+  <section id="certifications" class="hidden">
+    <div class="section-inner">
+      <p class="section-label">What I've earned</p>
+      <h2 class="section-title">Certifications</h2>
+      <div class="cert-grid">
+ 
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+          <div class="cert-info">
+            <h3>Data Science Intern </h3>
+            <p>SkillCraft Technology</p>
+            <span class="cert-date">2025</span>
+          </div>
+          <a href="https://skillcrafttech.com/verify?id=SCT/OCT25/5280" target="_blank" class="cert-link" title="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+ 
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+          <div class="cert-info">
+            <h3>OCI AI Foundations Associate</h3>
+            <p>Oracle</p>
+            <span class="cert-date">2025</span>
+          </div>
+          <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=ABC7F519348F45CDB5533A20E5F33A16A60CC9B96C23D22166FE9D92D7B703FA" target="_blank" class="cert-link" title="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+ 
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+          <div class="cert-info">
+            <h3>Open Source Connect India (OSCI)</h3>
+            <p>Contributer</p>
+            <span class="cert-date">2025</span>
+          </div>
+          <a href="Certificate - Navneeta Mohapatra .pdf" target="_blank" class="cert-link" title="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+
+  <!-- HACKATHONS & EVENTS -->
+  <section id="hackathons" class="hidden">
+    <div class="section-inner">
+      <p class="section-label">Where I've competed</p>
+      <h2 class="section-title">Hackathons & Events</h2>
+      <div class="hackathon-grid">
+ 
+        <div class="hackathon-card">
+          <div class="hackathon-badge">🎯</div>
+          <div class="hackathon-info">
+            <div class="hackathon-top">
+              <h3>Agentic AI Hackathon</h3>
+              <span class="hackathon-result winner">Participant</span>
+            </div>
+            <p>Built an agentic AI project — An autonomous customer support agent that resolves ShopWave support tickets.</p>
+            <span class="hackathon-date"><i class="fas fa-calendar-alt"></i> 2026</span>
+          </div>
+        </div>
+ 
+        <div class="hackathon-card">
+          <div class="hackathon-badge">🎯</div>
+          <div class="hackathon-info">
+            <div class="hackathon-top">
+              <h3>Guidewire Devtrails University Hackathon</h3>
+              <span class="hackathon-result winner">Participant</span>
+            </div>
+            <p> AI-enabled parametric insurance to safeguard delivery partners against income loss caused by uncontrollable external disruptions.</p>
+            <span class="hackathon-date"><i class="fas fa-calendar-alt"></i> 2026</span>
+          </div>
+        </div>
+
+        <div class="hackathon-card">
+          <div class="hackathon-badge">🎯</div>
+          <div class="hackathon-info">
+            <div class="hackathon-top">
+              <h3>Google The Big Code 2026</h3>
+              <span class="hackathon-result winner">Paricipant</span>
+            </div>
+            <p>Participated in a national-level coding competition, applying problem-solving skills and algorithmic thinking to solve real-world challenges under time constraints.</p>
+            <span class="hackathon-date"><i class="fas fa-calendar-alt"></i> 2026</span>
+          </div>
+        </div>
+ 
+        <div class="hackathon-card">
+          <div class="hackathon-badge">💡</div>
+          <div class="hackathon-info">
+            <div class="hackathon-top">
+              <h3>HackDefence Summit</h3>
+              <span class="hackathon-result finalist">Guest</span>
+            </div>
+            <p>Attended a cybersecurity-focused summit, gaining insights into modern security practices, threat analysis, and industry trends.</p>
+            <span class="hackathon-date"><i class="fas fa-calendar-alt"></i> 2026</span>
+          </div>
+        </div>
+
+        <div class="hackathon-card">
+          <div class="hackathon-badge">💡</div>
+          <div class="hackathon-info">
+            <div class="hackathon-top">
+              <h3>National Convention on Quality Concepts (QCFI)</h3>
+              <span class="hackathon-result finalist">Volunteer</span>
+            </div>
+            <p>Volunteered at the National Convention on Quality Concepts (NCQC), assisting in event coordination, participant management, and ensuring smooth execution of activities.</p>
+            <span class="hackathon-date"><i class="fas fa-calendar-alt"></i> 2025</span>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+
+    <!-- CONTACT -->
+  <section id="contact" class="hidden">
+    <div class="section-inner">
+      <p class="section-label">Let's connect</p>
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-email"><i class="fas fa-envelope"></i> mohapatra.navneeta26@gmail.com</p>
+      <div class="social-icons">
+        <a href="https://github.com/navneeta88" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/navneeta-mohapatra-" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://leetcode.com/navneeta218" target="_blank" title="LeetCode">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- BACK TO TOP -->
+  <button id="backToTop" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+
   <script src="script.js"></script>
-
 </body>
 </html>
