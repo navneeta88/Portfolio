@@ -52,23 +52,10 @@ portfolio/
 ├── script.js
 ├── profile.jpg
 └── README.md
+└── Certificate-Navneeta Mohapatra.pdf
 ```
 
 ---
 
-## 🚀 How to Run Locally
 
-1. Clone the repo
-```bash
-git clone https://github.com/yourusername/portfolio.git
-```
-2. Open `index.html` in your browser
 
----
-
-## 📬 Contact
-
-- Email: your@email.com
-- GitHub: [github.com/yourusername](https://github.com/yourusername)
-- LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
-- LeetCode: [leetcode.com/yourusername](https://leetcode.com/yourusername)
