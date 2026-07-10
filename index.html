@@ -7,20 +7,42 @@
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,
   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-    <rect width='100' height='100' rx='18' fill='%230099cc'/>
+    <rect width='100' height='100' rx='18' fill='%23c76b98'/>
     <text y='.9em' font-size='72' font-family='serif' font-weight='bold' fill='white' x='12'>
       N
     </text>
   </svg>">
  
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Navneeta Mohapatra — B.Tech CSE (AI/ML) student building production-deployed ML systems, parametric insurance platforms, and autonomous LLM agents.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="loading">
+
+  <!-- LOADING SCREEN -->
+  <div id="loading-screen">
+    <svg class="loader-monogram" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="loaderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#e6a4c4"/>
+          <stop offset="100%" stop-color="#b79ae8"/>
+        </linearGradient>
+      </defs>
+      <circle class="ring" cx="70" cy="70" r="62"/>
+      <path class="letter" d="M40,108 L40,32 L100,108 L100,32"/>
+      <circle class="letter-fill" cx="112" cy="112" r="4"/>
+    </svg>
+    <p class="loader-tagline">welcome to my world</p>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- AMBIENT BACKGROUND -->
+  <div class="ambient-blob b1"></div>
+  <div class="ambient-blob b2"></div>
+  <div class="ambient-blob b3"></div>
+
 
   <!-- NAVBAR -->
   <nav id="navbar">
@@ -34,7 +56,7 @@
         <a href="#projects">Projects</a>
         <a href="#certifications">Certifications</a>
         <a href="#hackathons">Hackathons</a>
-        <a href="#hackathons">Events</a>
+        <a href="#achievements">Achievements</a>
         <a href="#contact">Contact</a>
       </div>
       <label class="switch">
@@ -54,19 +76,37 @@
         <p class="home-greeting">Hello there 👋</p>
         <h1>I'm <span class="accent">Navneeta</span></h1>
         <h2 class="typing-line">I am a <span id="typing"></span><span class="cursor">|</span></h2>
-        <p class="home-sub">Aspiring Software Developer · B.Tech Student</p>
+        <p class="home-sub">B.Tech CSE (AI/ML) · Building production-deployed ML systems & autonomous agents</p>
         <div class="home-buttons">
           <a href="#projects" class="btn-primary">View Projects</a>
           <a href="#contact" class="btn-outline">Contact Me</a>
-
+          <a href="Navneeta_Mohapatra_Resume.pdf" class="btn-outline" download>Download Resume</a>
         </div>
       </div>
       <div class="home-image">
-        <div class="image-wrapper">
-          <img src="navneeta.jpg" alt="Navneeta">
+        <div class="photocard">
+          <span class="photocard-tag">N ⋆ 01</span>
+          <div class="image-wrapper">
+            <img src="navneeta.jpg" alt="Navneeta">
+          </div>
+          <span class="photocard-star">✦</span>
         </div>
       </div>
     </div>
+
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span>AI / ML  DEVELOPER</span><span class="dot">⟡</span>
+        <span>AGENTIC AI BUILDER</span><span class="dot">⟡</span>
+        <span>FULL-STACK ENGINEER</span><span class="dot">⟡</span>
+        <span>PROBLEM SOLVER</span><span class="dot">⟡</span>
+        <span>ML / AI DEVELOPER</span><span class="dot">⟡</span>
+        <span>AGENTIC AI BUILDER</span><span class="dot">⟡</span>
+        <span>FULL-STACK ENGINEER</span><span class="dot">⟡</span>
+        <span>PROBLEM SOLVER</span><span class="dot">⟡</span>
+      </div>
+    </div>
+
     <div class="scroll-hint"><span></span></div>
   </section>
 
@@ -76,11 +116,13 @@
       <p class="section-label">Get to know me</p>
       <h2 class="section-title">About Me</h2>
       <p class="about-text">
-        I’m a Computer Science student who enjoys building
-        real-world applications and learning through hands-on 
-        projects. I focus on developing strong problem-solving
-        skills while exploring web development, backend systems
-        , and emerging technologies like AI.
+        I'm a B.Tech CSE (AI/ML) student, Class of 2028, who enjoys turning
+        real-world problems into production-deployed systems. I've built a
+        parametric insurance platform for gig workers, an autonomous
+        LLM-powered support agent, and ML models for risk and triage
+        prediction — combining backend engineering, data science, and
+        applied machine learning. I'm currently deepening my ML expertise
+        and working toward Amazon ML Summer School 2026.
       </p>
     </div>
   </section>
@@ -88,18 +130,22 @@
     <!-- STATS -->
   <section id="stats" class="hidden stats-section">
     <div class="section-inner">
-      <div class="stats-grid stats-grid-3">
+      <div class="stats-grid stats-grid-4">
         <div class="stat-card">
-          <span class="stat-number" data-target="3">0</span>
+          <span class="stat-number" data-target="10">0</span>
           <span class="stat-label">Projects Built</span>
         </div>
         <div class="stat-card">
-          <span class="stat-number" data-target="4">0</span>
-          <span class="stat-label">Skills Learned</span>
+          <span class="stat-number" data-target="110">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">DSA Problems Solved</span>
         </div>
         <div class="stat-card">
-          <span class="stat-number" data-target="100">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Problems Solved</span>
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="5">0</span>
+          <span class="stat-label">Hackathons & Events</span>
         </div>
       </div>
     </div>
@@ -118,47 +164,79 @@
             <h3>Languages</h3>
           </div>
           <div class="skill-tags">
-            <span><i class="devicon cpp"></i> C++</span>
-            <span><i class="devicon java"></i> Java</span>
             <span><i class="devicon python"></i> Python</span>
-          </div>
-        </div>
-
-        <div class="skill-cat-card">
-          <div class="skill-cat-header">
-            <i class="fas fa-globe"></i>
-            <h3>Web</h3>
-          </div>
-          <div class="skill-tags">
-            <span><i class="fab fa-html5"></i> HTML</span>
-            <span><i class="fab fa-css3-alt"></i> CSS</span>
             <span><i class="fab fa-js"></i> JavaScript</span>
-            <span><i class="fab fa-node-js"></i> Node.js</span>
-            <span><i class="fab fa-react"></i> React</span>
+            <span><i class="devicon cpp"></i> C/C++</span>
+            <span><i class="devicon java"></i> Java</span>
           </div>
         </div>
 
         <div class="skill-cat-card">
           <div class="skill-cat-header">
             <i class="fas fa-brain"></i>
-            <h3>CS Fundamentals</h3>
+            <h3>ML / Data Science</h3>
           </div>
           <div class="skill-tags">
-            <span><i class="fas fa-sitemap"></i> Data Structures</span>
-            <span><i class="fas fa-bolt"></i> Algorithms</span>
-            <span><i class="fas fa-redo"></i> Recursion</span>
+            <span><i class="fas fa-chart-line"></i> Scikit-learn</span>
+            <span><i class="fas fa-square-root-variable"></i> NumPy</span>
+            <span><i class="fas fa-table"></i> Pandas</span>
+            <span><i class="fas fa-chart-area"></i> Matplotlib</span>
+            <span><i class="fas fa-magnifying-glass-chart"></i> Anomaly Detection</span>
+            <span><i class="fas fa-shield-halved"></i> Risk Modelling</span>
+          </div>
+        </div>
+
+        <div class="skill-cat-card">
+          <div class="skill-cat-header">
+            <i class="fas fa-robot"></i>
+            <h3>LLM & Agents</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="fas fa-bolt"></i> Groq API</span>
+            <span><i class="fas fa-microchip"></i> Llama-3.3-70B</span>
+            <span><i class="fas fa-diagram-project"></i> Agentic Loop Design</span>
+            <span><i class="fas fa-toolbox"></i> Tool-use Orchestration</span>
+            <span><i class="fas fa-comments"></i> Prompt Engineering</span>
+          </div>
+        </div>
+
+        <div class="skill-cat-card">
+          <div class="skill-cat-header">
+            <i class="fas fa-server"></i>
+            <h3>Backend & Frameworks</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="fas fa-flask"></i> Flask</span>
+            <span><i class="fab fa-node-js"></i> Node.js / Express</span>
+            <span><i class="fas fa-plug"></i> REST APIs</span>
+            <span><i class="fas fa-leaf"></i> MongoDB</span>
+            <span><i class="fas fa-credit-card"></i> Razorpay</span>
+          </div>
+        </div>
+
+        <div class="skill-cat-card">
+          <div class="skill-cat-header">
+            <i class="fas fa-globe"></i>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="fab fa-react"></i> React.js</span>
+            <span><i class="fab fa-html5"></i> HTML5</span>
+            <span><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span><i class="fas fa-chart-simple"></i> Streamlit</span>
           </div>
         </div>
 
         <div class="skill-cat-card">
           <div class="skill-cat-header">
             <i class="fas fa-tools"></i>
-            <h3>Tools</h3>
+            <h3>Tools & Databases</h3>
           </div>
           <div class="skill-tags">
-            <span><i class="fab fa-git-alt"></i> Git</span>
-            <span><i class="fab fa-github"></i> GitHub</span>
-            <span><i class="fas fa-terminal"></i> VS Code</span>
+            <span><i class="fab fa-git-alt"></i> Git / GitHub</span>
+            <span><i class="fas fa-database"></i> SQL / SQLite</span>
+            <span><i class="fas fa-cloud"></i> Oracle Cloud Infra</span>
+            <span><i class="fas fa-terminal"></i> VS Code · Colab</span>
           </div>
         </div>
 
@@ -176,9 +254,18 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
+            <span class="timeline-date">2025</span>
+            <h3>Data Science Intern</h3>
+            <p>SkillCraft Technology (Online) · Performed end-to-end data preprocessing, EDA, and visualization (Pandas, NumPy, Matplotlib) on real-world datasets; identified statistical patterns and communicated findings through structured reports.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
             <span class="timeline-date">2024 – Present</span>
             <h3>B.Tech in Computer Science (AI-ML)</h3>
-            <p>G.L. Bajaj Institute Of Technology And Management · Pursuing a bachelor's degree with focus on algorithms, data structures, and software development.</p>
+            <p>G.L. Bajaj Institute Of Technology And Management, Greater Noida · Focus on DSA, OOP (Java), DBMS, Operating Systems, and Probability & Statistics.</p>
           </div>
         </div>
 
@@ -213,47 +300,149 @@
 
         <div class="card">
           <div class="card-top">
-            <i class="fas fa-maze card-icon"></i>
+            <i class="fas fa-shield-halved card-icon"></i>
             <div class="card-links">
               <a href="https://github.com/navneeta88/RiderSaathi" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
               <a href="https://rider-saathi-beta.vercel.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
-          <h3>Rider Saathi - Smart Assistance System</h3>
-          <p>Designed and built a smart assistance system for riders, providing real-time support.</p>
+          <h3>RiderSaathi — AI-Powered Parametric Insurance</h3>
+          <p>A fully automated parametric insurance platform protecting India's gig delivery workers against weekly income loss from extreme weather, high AQI, curfews, and app downtime. Includes a dynamic premium engine, a 7-layer fraud detection system, and Isolation Forest–based anomaly detection on GPS and claim patterns.</p>
           <div class="card-tags">
-            <span>HTML CSS JavaScript</span><span>Node.js</span><span>Python</span>
+            <span>Flask</span><span>scikit-learn</span><span>Node.js</span><span>MongoDB</span><span>Razorpay</span>
           </div>
         </div>
 
         <div class="card">
           <div class="card-top">
-            <i class="fas fa-brain card-icon"></i>
+            <i class="fas fa-robot card-icon"></i>
             <div class="card-links">
               <a href="https://github.com/navneeta88/-hackathon2026-Navneeta_Mohapatra" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
               <a href="https://myovzdy2qenmhwvsnpeomt.streamlit.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
-          <h3>ShopWave Autonomous Support Agent</h3>
-          <p>An autonomous customer support agent that resolves ShopWave support tickets using Claude's native tool use, concurrent processing, and full audit logging.</p>
+          <h3>ShopWave — Autonomous Customer Support Agent</h3>
+          <p>An autonomous e-commerce support agent built on Llama-3.3-70B (via Groq) that reasons over context, selects tools, and iterates until resolution or escalation. Implements 8 async tools, retry logic with exponential backoff, and a full JSON audit trail per ticket — visualized in a live Streamlit dashboard.</p>
           <div class="card-tags">
-            <span>Python</span><span>LLM-Llama-3.3-70B via Groq
-</span>
+            <span>Python</span><span>Groq API</span><span>Llama-3.3-70B</span><span>asyncio</span><span>Streamlit</span>
           </div>
         </div>
 
         <div class="card">
           <div class="card-top">
-            <i class="fas fa-brain card-icon"></i>
+            <i class="fas fa-magnifying-glass-chart card-icon"></i>
             <div class="card-links">
-              <a href="https://github.com/navneeta88/-hackathon2026-Navneeta_Mohapatra" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/navneeta88/redrobai-candidate-ranker" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
           </div>
-          <h3>AI Healthcare Web Application</h3>
-          <p>Built a Flask based web application with integrated machine learning capabilities.</p>
+          <h3>Redrob AI — Candidate Discovery & Ranking Engine</h3>
+          <p>Built for the Redrob AI / Hack2Skill "India Runs" Data & AI Challenge. Ranks 100,000 candidate profiles against a job description in 60–120s, CPU-only, combining TF-IDF semantic similarity, rule-based JD-fit scoring, and behavioral signals — while explicitly detecting and excluding "honeypot" profiles with internally impossible data. Passes the official validator with zero errors.</p>
           <div class="card-tags">
-            <span>Python</span><span>AI/ML</span><span>Data</span>
+            <span>Python</span><span>scikit-learn</span><span>TF-IDF</span><span>Rule-based Scoring</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <i class="fas fa-leaf card-icon"></i>
+            <div class="card-links">
+              <a href="https://github.com/navneeta88/ecomirror" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://ecomirror-six.vercel.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3>EcoMirror — Carbon Footprint Awareness Platform</h3>
+          <p>A Google "Build with AI – Prompt Wars" Challenge 3 submission. Turns lifestyle data into an emotional story — a living city skyline that visibly changes with your carbon score, Gemini-generated personal narratives with relatable analogies, and live what-if sliders across 6 impact categories.</p>
+          <div class="card-tags">
+            <span>React</span><span>Vite</span><span>Gemini API</span><span>SVG Animation</span>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <div class="card-top">
+            <i class="fas fa-heart-pulse card-icon"></i>
+            <div class="card-links">
+              <a href="https://github.com/navneeta88" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <span class="in-progress-badge" title="In Progress"><i class="fas fa-hourglass-half"></i></span>
+            </div>
+          </div>
+          <h3>Triage AI — Medical Prioritization Web App</h3>
+          <p>Building ML classification models trained on healthcare datasets to predict patient triage priority in real time, with a React frontend for live prediction display and a Flask + SQLite backend for patient data storage. In progress.</p>
+          <div class="card-tags">
+            <span>React.js</span><span>Flask</span><span>scikit-learn</span><span>SQLite</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <i class="fas fa-triangle-exclamation card-icon"></i>
+            <div class="card-links">
+              <a href="https://github.com/navneeta88" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Gas Leakage Detection System (IoT)</h3>
+          <p>A real-time IoT-based gas detection system with sensor-based risk classification and an automated multi-channel alert notification pipeline.</p>
+          <div class="card-tags">
+            <span>IoT</span><span>Sensors</span><span>Risk Classification</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <i class="fas fa-book-open card-icon"></i>
+            <div class="card-links">
+              <a href="https://github.com/navneeta88/Personal-Diary" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://personal-diary-smoky-ten.vercel.app" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3>Personal Diary</h3>
+          <p>A full-stack personal diary app where users register, log in, and create, view, edit, and delete their own entries — scoped per user. React frontend, Node.js + Express backend, with data persisted to JSON files.</p>
+          <div class="card-tags">
+            <span>React</span><span>Node.js</span><span>Express</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <i class="fas fa-border-all card-icon"></i>
+            <div class="card-links">
+              <a href="https://github.com/navneeta88/Sudoku" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://sudoku-opal-beta.vercel.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3>Sudoku</h3>
+          <p>A fully playable Sudoku game built with plain HTML, CSS, and JavaScript — no frameworks. Custom puzzle generator guarantees a unique solution, 4 difficulty levels, pencil notes, undo history, hints, mistake tracking, and autosave via localStorage.</p>
+          <div class="card-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <i class="fas fa-table-tennis-paddle-ball card-icon"></i>
+            <div class="card-links">
+              <a href="https://github.com/navneeta88/Ping-Pong-Game" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Ping-Pong Game</h3>
+          <p>A classic two-player Pong game built with Python's Turtle graphics — real-time paddle movement, ball physics, and live score tracking.</p>
+          <div class="card-tags">
+            <span>Python</span><span>Turtle Graphics</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <i class="fas fa-id-badge card-icon"></i>
+            <div class="card-links">
+              <a href="https://github.com/navneeta88/Portfolio" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://navneeta88.github.io/Portfolio" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3>Personal Portfolio Website</h3>
+          <p>This site — a responsive portfolio with dark/light mode, typing animation, scroll-reveal, and an animated stats counter, built with vanilla HTML5, CSS3, and JavaScript.</p>
+          <div class="card-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
           </div>
         </div>
 
@@ -294,10 +483,19 @@
           <div class="cert-icon"><i class="fas fa-certificate"></i></div>
           <div class="cert-info">
             <h3>Open Source Connect India (OSCI)</h3>
-            <p>Contributer</p>
+            <p>Participant</p>
             <span class="cert-date">2025</span>
           </div>
           <a href="Certificate - Navneeta Mohapatra .pdf" target="_blank" class="cert-link" title="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+          <div class="cert-info">
+            <h3>AI for All</h3>
+            <p>TCS iON</p>
+            <span class="cert-date">2025</span>
+          </div>
         </div>
  
       </div>
@@ -327,10 +525,10 @@
           <div class="hackathon-badge">🎯</div>
           <div class="hackathon-info">
             <div class="hackathon-top">
-              <h3>Guidewire Devtrails University Hackathon</h3>
-              <span class="hackathon-result winner">Participant</span>
+              <h3>Guidewire DevTrails University Hackathon</h3>
+              <span class="hackathon-result winner">Top ~400</span>
             </div>
-            <p> AI-enabled parametric insurance to safeguard delivery partners against income loss caused by uncontrollable external disruptions.</p>
+            <p>Built RiderSaathi — an AI-enabled parametric insurance system to safeguard delivery partners against income loss caused by uncontrollable external disruptions.</p>
             <span class="hackathon-date"><i class="fas fa-calendar-alt"></i> 2026</span>
           </div>
         </div>
@@ -339,10 +537,10 @@
           <div class="hackathon-badge">🎯</div>
           <div class="hackathon-info">
             <div class="hackathon-top">
-              <h3>Google The Big Code 2026</h3>
-              <span class="hackathon-result winner">Paricipant</span>
+              <h3>Google "Build with AI – Prompt Wars"</h3>
+              <span class="hackathon-result winner">Ongoing</span>
             </div>
-            <p>Participated in a national-level coding competition, applying problem-solving skills and algorithmic thinking to solve real-world challenges under time constraints.</p>
+            <p>Competing in an ongoing multi-challenge prompt engineering series by Google. Challenge 3 submission: <strong>EcoMirror</strong>, a carbon-footprint storytelling app built with React and the Gemini API.</p>
             <span class="hackathon-date"><i class="fas fa-calendar-alt"></i> 2026</span>
           </div>
         </div>
@@ -375,6 +573,53 @@
     </div>
   </section>
 
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="hidden">
+    <div class="section-inner">
+      <p class="section-label">Beyond the code</p>
+      <h2 class="section-title">Achievements & Activities</h2>
+      <div class="hackathon-grid">
+
+        <div class="hackathon-card">
+          <div class="hackathon-badge">🧑‍🏫</div>
+          <div class="hackathon-info">
+            <div class="hackathon-top">
+              <h3>College Mentor-Mentee Program</h3>
+              <span class="hackathon-result finalist">Mentor</span>
+            </div>
+            <p>Mentored junior students as a senior peer during the summer program.</p>
+            <span class="hackathon-date"><i class="fas fa-calendar-alt"></i> June 2026</span>
+          </div>
+        </div>
+
+        <div class="hackathon-card">
+          <div class="hackathon-badge">💻</div>
+          <div class="hackathon-info">
+            <div class="hackathon-top">
+              <h3>Coding Competitions</h3>
+              <span class="hackathon-result finalist">Participant</span>
+            </div>
+            <p>Participated in coding competitions hosted by Google and Flipkart.</p>
+            <span class="hackathon-date"><i class="fas fa-calendar-alt"></i> 2026</span>
+          </div>
+        </div>
+
+        <div class="hackathon-card">
+          <div class="hackathon-badge">🌐</div>
+          <div class="hackathon-info">
+            <div class="hackathon-top">
+              <h3>Open Source Contributor</h3>
+              <span class="hackathon-result finalist">Participant</span>
+            </div>
+            <p>Active open-source contributor on GitHub across multiple ML, full-stack, and agentic AI projects.</p>
+            <span class="hackathon-date"><i class="fas fa-calendar-alt"></i> Ongoing</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
     <!-- CONTACT -->
   <section id="contact" class="hidden">
     <div class="section-inner">
@@ -383,7 +628,7 @@
       <p class="contact-email"><i class="fas fa-envelope"></i> mohapatra.navneeta26@gmail.com</p>
       <div class="social-icons">
         <a href="https://github.com/navneeta88" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/navneeta-mohapatra-" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://linkedin.com/in/navneeta-mohapatra" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://leetcode.com/navneeta218" target="_blank" title="LeetCode">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>

@@ -1,9 +1,23 @@
+
+// Loading Screen (monogram reveal)
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loading-screen");
+  const minShow = 2600; // let the monogram animation finish
+  setTimeout(() => {
+    if (loader) {
+      loader.classList.add("fade-out");
+      document.body.classList.remove("loading");
+    }
+  }, minShow);
+});
+
 document.addEventListener("DOMContentLoaded", () => {
 
-  // =========================
+  
   // Typing Animation
-  // =========================
-  const text = ["Developer", "Problem Solver", "Tech Enthusiast"];
+ 
+  const text = ["ML/AI Developer", "Agentic AI Builder", "Problem Solver"];
   let i = 0, j = 0, isDeleting = false;
 
   function type() {
@@ -25,9 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   type();
 
-  // =========================
   // Scroll Reveal + Skill Bars
-  // =========================
+  
   const sections = document.querySelectorAll(".hidden");
   let skillsAnimated = false;
 
@@ -45,9 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
 
-  // =========================
+  
   // Active Navbar Highlight
-  // =========================
+  
   const navLinks = document.querySelectorAll("nav a");
 
   window.addEventListener("scroll", () => {
@@ -65,9 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // =========================
+  
   // Animated Stats Counter
-  // =========================
+  
   let statsAnimated = false;
 
   function animateStats() {
@@ -94,9 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", animateStats);
   animateStats();
 
-  // =========================
+  
   // Back To Top Button
-  // =========================
+  
   const backToTop = document.getElementById("backToTop");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 400) backToTop.classList.add("visible");
@@ -121,9 +134,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// =========================
+
 // Cursor Glow Effect
-// =========================
+
 const glow = document.createElement("div");
 glow.id = "cursor-glow";
 document.body.appendChild(glow);
